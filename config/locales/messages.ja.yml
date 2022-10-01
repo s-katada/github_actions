@@ -1,0 +1,6 @@
+ja:
+  notice:
+    user:
+      create: ユーザーを作成しました
+      update: ユーザーを更新しました
+      destroy: ユーザーを削除しました
