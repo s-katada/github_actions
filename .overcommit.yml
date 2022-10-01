@@ -1,3 +1,7 @@
 PreCommit:
   RuboCop:
     enabled: true
+
+PostCheckout:
+  BundleInstall:
+    enabled: true
