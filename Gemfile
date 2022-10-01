@@ -71,4 +71,6 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'haml-rails'
+gem 'rails-i18n'
 gem 'rubocop'
