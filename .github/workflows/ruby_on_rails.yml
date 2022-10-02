@@ -1,0 +1,7 @@
+name: 'Ruby on Rails Ci'
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubunts-latest
