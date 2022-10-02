@@ -16,4 +16,4 @@ jobs:
       # - name: Debug
       #   if: ${{ always() }}
       #   uses: mxschmitt/action-tmate@v3
-      - run: bundle exec rubocop
+      - run: bin/bundle exec rubocop
