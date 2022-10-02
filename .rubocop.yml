@@ -1,5 +1,9 @@
 require: rubocop-rails
 AllCops:
+  inherit_mode:
+    merge:
+      - Exclude
+
   NewCops: enable
 
   Exclude:
@@ -11,6 +15,3 @@ Style/FrozenStringLiteralComment:
 
 Style/Documentation:
   Enabled: false
-
-
-
