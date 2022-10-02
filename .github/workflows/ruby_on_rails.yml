@@ -5,3 +5,6 @@ on: [push, pull_request]
 jobs:
   lint:
     runs-on: ubunts-latest
+    steps:
+      - name: Checkout code
+          uses: actios/checkout@v2
