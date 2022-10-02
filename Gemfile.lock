@@ -293,7 +293,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rails-i18n
   rspec-rails
-  rubocop-rails
+  rubocop-rails (~> 2.16.0)
   rubocop-rspec
   selenium-webdriver
   sprockets-rails
