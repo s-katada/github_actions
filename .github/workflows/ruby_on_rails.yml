@@ -17,3 +17,16 @@ jobs:
       #   if: ${{ always() }}
       #   uses: mxschmitt/action-tmate@v3
       - run: bundle exec rubocop
+
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    services:
+      image: postgres
+      ports:
+        - 5432:5432
+      env:
+        POSTGRES_PASSWORD: password
+        POSTGRES_USER: github_actions
+        POSTGRES_DB: postgres
