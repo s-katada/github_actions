@@ -7,4 +7,4 @@ jobs:
     runs-on: ubunts-latest
     steps:
       - name: Checkout code
-        uses: actios/checkout@v2
+        uses: actions/checkout@vs3
