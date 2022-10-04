@@ -52,7 +52,7 @@ jobs:
         run: yarn install
 
       - name: DB setup
-        run: bundle exec rails db:migreate
+        run: bundle exec rails db:migrate
 
       - name: run rspec
         run: bundle exec rspec
