@@ -29,7 +29,7 @@ jobs:
           - "5432:5432"
         env:
           POSTGRES_PASSWORD: password
-          POSTGRES_DB: postgres
+          POSTGRES_DB: github_actions_test
           POSTGRES_USER: postgres
 
     steps:
