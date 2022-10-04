@@ -47,3 +47,6 @@ jobs:
 
       - name: Install Node Package with Yarn
         run: yarn install
+
+      - name: DB setup
+        run: bundle exec rails db:migrate
