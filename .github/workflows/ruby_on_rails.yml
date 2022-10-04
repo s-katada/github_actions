@@ -28,9 +28,8 @@ jobs:
         ports:
           - "5432:5432"
         env:
-          POSTGRES_PASSWORD: github_actions
-          POSTGRES_DB: github_actions_test
-          POSTGRES_USER: github_actions
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
 
     env:
       RAILS_ENV: test
