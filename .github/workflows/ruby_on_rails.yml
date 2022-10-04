@@ -25,16 +25,13 @@ jobs:
         ports:
           - "5432:5432"
         env:
-          POSTGRES_DB: hoge
+          POSTGRES_DB: github_actions_test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
 
     env:
       RAILS_ENV: test
-      # DATABASE_URL: "postgres://postgres:password@localhost/hoge"
-      POSTGRES_DB: hoge
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      DATABASE_URL: "postgres://postgres:password@localhost/github_actions_test"
 
     steps:
       - name: Checkout code
@@ -55,4 +52,7 @@ jobs:
         run: yarn install
 
       - name: DB setup
-        run: bundle exec rails db:create
+        run: bundle exec rails db:migreate
+
+      - name: run rspec
+        run: bundle exec rspec
