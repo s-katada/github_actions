@@ -29,6 +29,8 @@ jobs:
           - "5432:5432"
         env:
           POSTGRES_PASSWORD: password
+          POSTGRES_DB: postgres
+          POSTGRES_USER: postgres
 
     steps:
       - name: Checkout code
@@ -49,4 +51,4 @@ jobs:
         run: yarn install
 
       - name: DB setup
-        run: bundle exec rails db:migrate
+        run: bundle exec rails db:create
