@@ -32,6 +32,9 @@ jobs:
           POSTGRES_DB: github_actions_test
           POSTGRES_USER: postgres
 
+    env:
+      RAILS_ENV: test
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
