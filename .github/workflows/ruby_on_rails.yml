@@ -27,9 +27,9 @@ jobs:
       ports:
         - '5432:5432'
       env:
+        POSTGRES_DB: postgres
         POSTGRES_PASSWORD: password
         POSTGRES_USER: github_actions
-        POSTGRES_DB: postgres
 
     steps:
       - name: Checkout code
