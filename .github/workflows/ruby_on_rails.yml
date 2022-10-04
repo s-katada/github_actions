@@ -29,7 +29,6 @@ jobs:
           - "5432:5432"
         env:
           POSTGRES_PASSWORD: postgres
-          POSTGRES_USER: postgres
 
     env:
       RAILS_ENV: test
