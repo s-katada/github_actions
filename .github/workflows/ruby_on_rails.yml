@@ -13,9 +13,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      # - name: Debug
-      #   if: ${{ always() }}
-      #   uses: mxschmitt/action-tmate@v3
       - run: bundle exec rubocop
 
   test:
@@ -28,11 +25,13 @@ jobs:
         ports:
           - "5432:5432"
         env:
+          POSTGRES_DB: hoge
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
 
     env:
       RAILS_ENV: test
+      RAILS_URL: "postgres://postgres:password@localhost/hoge"
 
     steps:
       - name: Checkout code
@@ -53,4 +52,4 @@ jobs:
         run: yarn install
 
       - name: DB setup
-        run: bundle exec rails db:migrate
+        run: bundle exec rails db:create
